@@ -1,317 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-     
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoBrokerage | Contact Us</title>
+  <link rel="icon" href="favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <style>
+    body { font-family: 'Work Sans', sans-serif; }
+    .hero-bg {
+      background-image: url('images/hero_bg_1.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+
   <script>
+    // Welcome popup
     window.onload = function() {
-    Swal.fire({
-      title: "Welcome!",
-      text: "Please fill the form to view project details",
-      confirmButtonText: "Got it!"
-    });
-  };
- 
-
+      Swal.fire({
+        title: "Welcome!",
+        text: "Please fill the form to view project details",
+        icon: "info",
+        confirmButtonText: "Got it!"
+      });
+    };
   </script>
-  
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Untree.co" />
-    <link rel="shortcut icon" href="favicon.png" />
+</head>
 
-    <meta name="description" content="" />
-    <meta name="keywords" content="bootstrap, bootstrap5" />
+<body class="bg-gray-50 text-gray-800">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="fonts/icomoon/style.css" />
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
-
-    <link rel="stylesheet" href="css/tiny-slider.css" />
-    <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/style.css" />
-
-    <title>
-      Property &mdash; Free Bootstrap 5 Website Template by Untree.co
-    </title>
-  </head>
-  <body>
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close">
-          <span class="icofont-close js-menu-toggle"></span>
-        </div>
+  <!-- HEADER -->
+  <header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="logo1.png" alt="NoBrokerage" class="h-10 w-auto" />
+        <span class="font-semibold text-lg text-indigo-700">NoBrokerage</span>
       </div>
-      <div class="site-mobile-menu-body"></div>
+      <nav class="hidden md:flex gap-6 font-medium text-gray-700">
+        <a href="index.html" class="hover:text-indigo-600">Home</a>
+        <a href="properties.html" class="hover:text-indigo-600">Properties</a>
+        <a href="services.html" class="hover:text-indigo-600">Services</a>
+        <a href="about.html" class="hover:text-indigo-600">About</a>
+        <a href="contact.html" class="hover:text-indigo-600 text-indigo-700 font-semibold">Contact</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden p-2">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
+    <div id="mobileMenu" class="hidden bg-white border-t shadow-md md:hidden">
+      <nav class="flex flex-col items-start p-4 gap-3 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-indigo-600">Home</a>
+        <a href="properties.html" class="hover:text-indigo-600">Properties</a>
+        <a href="services.html" class="hover:text-indigo-600">Services</a>
+        <a href="about.html" class="hover:text-indigo-600">About</a>
+        <a href="contact.html" class="hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <nav class="site-nav" style="padding-top: 0px;">
+  <!-- HERO -->
+  <section class="hero-bg h-[60vh] flex items-center justify-center text-center text-white relative pt-16">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
+      <nav class="text-gray-200 text-sm">
+        <a href="index.html" class="hover:text-indigo-300">Home</a> /
+        <span class="text-indigo-200">Contact</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="py-16 container mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <!-- LEFT INFO -->
+    <div class="space-y-8">
       <div>
-        <div class="menu-bg-wrap"style="margin: 0px; border-radius: 0px;padding:0px;">
-          <div class="site-navigation"  >
-            <a class="float-start" style="padding:8px; border-radius: 0px;">NoBrokerage</a>
-
-            <ul
-              class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
-            >
-              <li><a   style="font-size: 18px;" href="index.html">Home</a></li>
-              <li>
-                <a   style="font-size: 18px;" href="properties.html">Properties</a>
-              </li>
-              <li><a   style="font-size: 18px;" href="services.html">Services</a></li>
-              <li><a   style="font-size: 18px;" href="about.html">About</a></li>
-              <li><a   style="font-size: 18px;" href="contact.html">Contact Us</a></li>
-            </ul>
-
-            <a
-              href="#"
-              class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
-              data-toggle="collapse"
-              data-target="#main-navbar"
-            >
-              <span></span>
-            </a>
-          </div>
-        </div>
+        <h2 class="text-2xl font-semibold text-indigo-700 mb-3">Get In Touch</h2>
+        <p class="text-gray-600">Have a question or want to schedule a visit? Our team is ready to assist you.</p>
       </div>
-    </nav>
 
-    
-    <div
-      class="hero page-inner overlay"
-      style="background-image: url('images/hero_bg_1.jpg')"
-    >
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-9 text-center mt-5">
-            <h1 class="heading" data-aos="fade-up">Contact Us</h1>
+      <div class="space-y-5 text-gray-700">
+        <div>
+          <h4 class="font-semibold text-lg flex items-center gap-2">
+            <span>📍</span> Location
+          </h4>
+          <p class="text-gray-500 ml-6">DGS Sales Experience, Lokhandwala Complex, Andheri West, Mumbai-400053</p>
+        </div>
 
-            <nav
-              aria-label="breadcrumb"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <ol class="breadcrumb text-center justify-content-center">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li
-                  class="breadcrumb-item active text-white-50"
-                  aria-current="page"
-                >
-                  Contact
-                </li>
-              </ol>
-            </nav>
-          </div>
+        <div>
+          <h4 class="font-semibold text-lg flex items-center gap-2">
+            <span>📧</span> Email
+          </h4>
+          <p class="text-gray-500 ml-6">support@nobrokerage.in</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-lg flex items-center gap-2">
+            <span>📞</span> Phone
+          </h4>
+          <p class="text-gray-500 ml-6">+91 9619583969</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-lg flex items-center gap-2">
+            <span>🕐</span> Open Hours
+          </h4>
+          <p class="text-gray-500 ml-6">Monday to Saturday — 10:00 AM to 7:00 PM</p>
         </div>
       </div>
     </div>
 
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-lg-4 mb-5 mb-lg-0"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="contact-info">
-              <div class="address mt-2">
-                <i class="icon-room"></i>
-                <h4 class="mb-2">Location:</h4>
-                <p>
-                  43 Raymouth Rd. Baltemoer,<br />
-                  London 3910
-                </p>
-              </div>
+    <!-- RIGHT FORM -->
+    <div class="bg-white p-8 rounded-2xl shadow-lg">
+      <h3 class="text-xl font-semibold text-gray-800 mb-6 border-b pb-3">Send Us a Message</h3>
+      <form id="myForm" class="space-y-5">
+        <div class="grid md:grid-cols-2 gap-4">
+          <input type="text" id="name" placeholder="Full Name" required class="border border-gray-300 rounded-lg px-4 py-3 w-full focus:ring-2 focus:ring-indigo-400 outline-none" />
+          <input type="email" id="email" placeholder="Email Address" required class="border border-gray-300 rounded-lg px-4 py-3 w-full focus:ring-2 focus:ring-indigo-400 outline-none" />
+        </div>
 
-              <div class="open-hours mt-4">
-                <i class="icon-clock-o"></i>
-                <h4 class="mb-2">Open Hours:</h4>
-                <p>
-                  Sunday-Friday:<br />
-                  11:00 AM - 2300 PM
-                </p>
-              </div>
+        <input type="tel" id="phone" placeholder="Phone Number" required class="border border-gray-300 rounded-lg px-4 py-3 w-full focus:ring-2 focus:ring-indigo-400 outline-none" />
 
-              <div class="email mt-4">
-                <i class="icon-envelope"></i>
-                <h4 class="mb-2">Email:</h4>
-                <p>info@Untree.co</p>
-              </div>
+        <textarea id="message" rows="5" placeholder="Write your message..." class="border border-gray-300 rounded-lg px-4 py-3 w-full focus:ring-2 focus:ring-indigo-400 outline-none"></textarea>
 
-              <div class="phone mt-4">
-                <i class="icon-phone"></i>
-                <h4 class="mb-2">Call:</h4>
-                <p>+1 1234 55488 55</p>
-              </div>
-            </div>
-          </div>
- <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-  <form id="myForm">
-    <div class="row">
-      <div class="col-6 mb-3">
-        <input type="text" class="form-control" id="name" style="font-size: 15px;" placeholder="Enter your name" required />
+        <button type="submit" class="w-full py-3 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white rounded-lg font-semibold shadow-md transition-all">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-10">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-10">
+      <div>
+        <h3 class="text-white font-semibold mb-3">Contact</h3>
+        <p>DGS Sales Experience, Lokhandwala Complex, Andheri West, Mumbai</p>
+        <p class="mt-2 text-indigo-400">📞 +91 9619583969</p>
       </div>
-      <div class="col-6 mb-3">
-        <input type="email" class="form-control" id="email" style="font-size: 15px;" placeholder="Enter your email" required />
+      <div>
+        <h3 class="text-white font-semibold mb-3">Quick Links</h3>
+        <ul class="space-y-1">
+          <li><a href="about.html" class="hover:text-indigo-400">About Us</a></li>
+          <li><a href="services.html" class="hover:text-indigo-400">Services</a></li>
+          <li><a href="vision.html" class="hover:text-indigo-400">Our Vision</a></li>
+        </ul>
       </div>
-      <div class="col-6 mb-3">
-        <input type="tel" class="form-control" id="phone" style="font-size: 15px;" placeholder="Enter your phone number" required />
-      </div>
-     
-      <div class="col-12 mb-3">
-        <textarea cols="30" rows="7" id="message" class="form-control" style="font-size: 15px;" placeholder="Message"></textarea>
-      </div>
-      <div class="col-12 mb-3">
-        <button type="submit" class="btn btn-primary">Send Message</button>
+      <div>
+        <h3 class="text-white font-semibold mb-3">Follow Us</h3>
+        <div class="flex gap-5 text-2xl mt-3">
+          <a href="https://www.instagram.com/sunny_rajbhar20" target="_blank" class="hover:text-indigo-400">📸</a>
+          <a href="#" class="hover:text-indigo-400">📘</a>
+          <a href="#" class="hover:text-indigo-400">💼</a>
+        </div>
       </div>
     </div>
-  </form>
-</div>
+    <div class="text-center text-gray-500 text-sm mt-10">
+      © <script>document.write(new Date().getFullYear())</script> NoBrokerage Realty. All Rights Reserved.
+    </div>
+  </footer>
 
-<!-- SweetAlert2 for popup -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Google Script Submission -->
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbx_LzscHfkiMDltnmmmJH5S4CovOG-BUzk2NpTXhEU5a9F8MhpiTjoNEb-b5SyaL3YtSw/exec";
 
-<script>
-const scriptURL = "https://script.google.com/macros/s/AKfycbx_LzscHfkiMDltnmmmJH5S4CovOG-BUzk2NpTXhEU5a9F8MhpiTjoNEb-b5SyaL3YtSw/exec";
+    document.getElementById("myForm").addEventListener("submit", async function(event) {
+      event.preventDefault();
 
-document.getElementById("myForm").addEventListener("submit", async function(event) {
-  event.preventDefault();
+      const data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value,
+      };
 
-  // ✅ Corrected data object
-  const data = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value,
-    message: document.getElementById("message").value,
-  };
+      try {
+        await fetch(scriptURL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
 
-  try {
-    // ✅ Corrected fetch() request
-    await fetch(scriptURL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+        Swal.fire({
+          title: "Message Sent!",
+          text: "Thank you for contacting us. Our team will reach out soon 🎉",
+          icon: "success",
+          confirmButtonText: "Go to Home"
+        }).then(() => {
+          window.location.href = "index.html";
+        });
+
+        document.getElementById("myForm").reset();
+      } catch (error) {
+        Swal.fire("Error", "Something went wrong while submitting the form 😞", "error");
+        console.error(error);
+      }
     });
 
-    // ✅ Success popup + redirect
-    Swal.fire({
-      title: "Message Sent!",
-      text: "Thank you for submitting the request. Our team will get back to you shortly 🎉",
-      icon: "success",
-      confirmButtonText: "Go to Home"
-    }).then(() => {
-      window.location.href = "index.html";
+    // Mobile menu toggle
+    document.getElementById("menuBtn").addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
     });
+  </script>
 
-    // Reset form
-    document.getElementById("myForm").reset();
-  } catch (error) {
-    Swal.fire("Error", "Something went wrong while submitting the form 😞", "error");
-    console.error(error);
-  }
-});
-</script>
-
-    <!-- /.untree_co-section -->
-
-    <div class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3>Contact</h3>
-              <address> DGS Sales Experience, 2nd Cross Lane, Lokhandwala Complex, Andheri West, Mumbai-400053</address>
-              <p>+91-9619583969</p>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3>Sources</h3>
-              <ul class="list-unstyled float-start links">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Vision</a></li>
-                <li><a href="#">Mission</a></li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3>Links</h3>
-              <ul class="list-unstyled links">
-                <li><a href="vision.html">Our Vision</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-              </ul>
-
-              <ul class="list-unstyled social">
-                <li>
-                  <a href="https://www.instagram.com/sunny_rajbhar20?igsh=MWE1bzltMW56YWs3Yw=="><span class="icon-instagram"></span></a>
-                </li>
-               
-                <li>
-                  <a href=""><span class="icon-facebook"></span></a>
-                </li>
-                <li>
-                  <a href=""><span class="icon-linkedin"></span></a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-
-        <div class="row mt-5">
-          <div class="col-12 text-center">
-            <!-- 
-              **==========
-              NOTE: 
-              Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
-              **==========
-            -->
-
-            <p>
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              . All Rights Reserved.
-            </p>
-            
-          </div>
-        </div>
-      </div>
-      <!-- /.container -->
-    </div>
-    <!-- /.site-footer -->
-
-    <!-- Preloader -->
-    <div id="overlayer"></div>
-    <div class="loader">
-      <div class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-    </div>
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/tiny-slider.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/counter.js"></script>
-    <script src="js/custom.js"></script>
-  </body>
+</body>
 </html>
