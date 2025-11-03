@@ -1,329 +1,241 @@
-<!-- /*
-* Template Name: Property
-* Template Author: Untree.co
-* Template URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Untree.co" />
-    <link rel="shortcut icon" href="favicon.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoBrokerage | Contact & Vision</title>
+  <link rel="icon" href="favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body { font-family: "Work Sans", sans-serif; background-color: #f8fafc; }
+    .hero-bg {
+      background: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)),
+        url('hero_bg_1.jpg') center/cover fixed;
+    }
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  </style>
+</head>
 
-    <meta name="description" content="" />
-    <meta name="keywords" content="bootstrap, bootstrap5" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-   <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="flaticon.css" />
-
-    <link rel="stylesheet" href="tiny-slider.css" />
-    <link rel="stylesheet" href="aos.css" />
-    <link rel="stylesheet" href="style.css" />
-
-    <title>
-      NoBrokrage
-    </title>
-  </head>
-  <body>
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close">
-          <span class="icofont-close js-menu-toggle"></span>
-        </div>
+<body class="text-gray-900">
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-6 py-3">
+      <div class="flex items-center gap-2">
+        <img src="logo1.png" alt="NoBrokerage Logo" class="h-10 w-auto">
+       
       </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-
-    <nav class="site-nav">
-      <div class="container">
-        <div class="menu-bg-wrap">
-          <div class="site-navigation">
-            <a href="index.html" class="logo m-0 float-start">Property</a>
-
-            <ul
-              class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
-            >
-              <li><a href="index.html">Home</a></li>
-              <li class="has-children">
-                <a href="properties.html">Properties</a>
-                <ul class="dropdown">
-                  <li><a href="#">Buy Property</a></li>
-                  <li><a href="#">Sell Property</a></li>
-                  <li class="has-children">
-                    <a href="#">Dropdown</a>
-                    <ul class="dropdown">
-                      <li><a href="#">Sub Menu One</a></li>
-                      <li><a href="#">Sub Menu Two</a></li>
-                      <li><a href="#">Sub Menu Three</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="about.html">About</a></li>
-              <li class="active"><a href="contact.html">Contact Us</a></li>
-            </ul>
-
-            <a
-              href="#"
-              class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
-              data-toggle="collapse"
-              data-target="#main-navbar"
-            >
-              <span></span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <div
-      class="hero page-inner overlay"
-      style="background-image: url('hero_bg_1.jpg')"
-    >
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-9 text-center mt-5">
-            <h1 class="heading" data-aos="fade-up">Our Vision</h1>
-
-            <nav
-              aria-label="breadcrumb"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <ol class="breadcrumb text-center justify-content-center">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li
-                  class="breadcrumb-item active text-white-50"
-                  aria-current="page"
-                >
-                  Our Vision
-                </li>
-              </ol>
-            </nav>
-          </div>
-        </div>
+      <div class="hidden md:flex gap-6 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-indigo-600">Home</a>
+        <a href="properties.html" class="hover:text-indigo-600">Properties</a>
+        <a href="services.html" class="hover:text-indigo-600">Services</a>
+        <a href="about.html" class="hover:text-indigo-600">About</a>
+        <a href="contact.html" class="text-indigo-700 font-semibold">Contact</a>
       </div>
     </div>
+  </nav>
 
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-lg-4 mb-5 mb-lg-0"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="contact-info">
-              <div class="address mt-2">
-                <i class="icon-room"></i>
-                <h4 class="mb-2">Location:</h4>
-                <p>
-                  43 Raymouth Rd. Baltemoer,<br />
-                  London 3910
-                </p>
-              </div>
+  <!-- Hero Section -->
+<section class="relative h-[90vh] overflow-hidden flex flex-col justify-center items-center text-center text-white bg-[#0B0B2B]">
 
-              <div class="open-hours mt-4">
-                <i class="icon-clock-o"></i>
-                <h4 class="mb-2">Open Hours:</h4>
-                <p>
-                  Sunday-Friday:<br />
-                  11:00 AM - 2300 PM
-                </p>
-              </div>
+  <!-- Animated radial spotlight background -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1a1a50_0%,_#090921_70%)]"></div>
+  
+  <!-- Soft moving light overlay -->
+  <div class="absolute inset-0 opacity-40 bg-gradient-to-r from-indigo-600 via-purple-700 to-pink-600 animate-lightwave"></div>
 
-              <div class="email mt-4">
-                <i class="icon-envelope"></i>
-                <h4 class="mb-2">Email:</h4>
-                <p>info@Untree.co</p>
-              </div>
+  <!-- Floating gradient orbs -->
+  <div class="absolute -top-10 left-1/3 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl animate-float-slow"></div>
+  <div class="absolute top-1/2 right-1/4 w-64 h-64 bg-purple-400/20 rounded-full blur-3xl animate-float-slower"></div>
+  <div class="absolute bottom-0 left-1/4 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl animate-float-slowest"></div>
 
-              <div class="phone mt-4">
-                <i class="icon-phone"></i>
-                <h4 class="mb-2">Call:</h4>
-                <p>+1 1234 55488 55</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <form action="#">
-              <div class="row">
-                <div class="col-6 mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div class="col-6 mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Your Email"
-                  />
-                </div>
-                <div class="col-12 mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Subject"
-                  />
-                </div>
-                <div class="col-12 mb-3">
-                  <textarea
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="7"
-                    class="form-control"
-                    placeholder="Message"
-                  ></textarea>
-                </div>
+  <!-- Main Vision Text -->
+  <div class="relative z-10 px-6" data-aos="fade-up" data-aos-duration="1000">
+    <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 via-pink-300 to-indigo-400 animate-gradient">
+      Shaping the Future of Real Estate
+    </h1>
 
-                <div class="col-12">
-                  <input
-                    type="submit"
-                    value="Send Message"
-                    class="btn btn-primary"
-                  />
-                </div>
-              </div>
-            </form>
-          </div>
+    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="150">
+      We envision a connected world where every property decision is guided by trust, innovation, and zero brokerage barriers.
+    </p>
+
+    <a href="#next-section"
+      class="px-8 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-pink-500 text-white font-semibold hover:scale-105 hover:shadow-[0_0_25px_rgba(139,92,246,0.6)] transition-transform duration-300">
+      Explore Our Vision ↓
+    </a>
+  </div>
+
+  <!-- Animated scroll indicator -->
+  <div class="absolute bottom-10 flex flex-col items-center animate-bounce text-gray-400" data-aos="fade-up" data-aos-delay="500">
+    <span class="text-sm mb-2">Scroll Down</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+      viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+  </div>
+
+  <style>
+    @keyframes gradientFlow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    @keyframes float-slow {
+      0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}
+    }
+    @keyframes float-slower {
+      0%,100%{transform:translateY(0)}50%{transform:translateY(-25px)}
+    }
+    @keyframes float-slowest {
+      0%,100%{transform:translateY(0)}50%{transform:translateY(-35px)}
+    }
+    @keyframes lightwave {
+      0%,100% { transform: translateX(0); }
+      50% { transform: translateX(-10%); }
+    }
+    .animate-gradient {
+      background-size: 300% 300%;
+      animation: gradientFlow 8s ease infinite;
+    }
+    .animate-lightwave {
+      animation: lightwave 10s ease-in-out infinite alternate;
+    }
+    .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+    .animate-float-slower { animation: float-slower 8s ease-in-out infinite; }
+    .animate-float-slowest { animation: float-slowest 10s ease-in-out infinite; }
+  </style>
+
+</section>
+
+
+  <!-- Vision Highlights -->
+  <section class="py-20 bg-gradient-to-br from-indigo-50 via-white to-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-indigo-700 mb-12" data-aos="fade-down">Our Core Vision</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 text-center" data-aos="zoom-in">
+          <div class="text-5xl mb-3">🌍</div>
+          <h3 class="text-lg font-semibold mb-2">Global Transparency</h3>
+          <p class="text-gray-600">We aim to make property transactions as open and simple as booking a cab online.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 text-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="text-5xl mb-3">🏗️</div>
+          <h3 class="text-lg font-semibold mb-2">Empowered Owners</h3>
+          <p class="text-gray-600">Every property owner should have control — from listing to deal closure.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 text-center" data-aos="zoom-in" data-aos-delay="200">
+          <div class="text-5xl mb-3">🤝</div>
+          <h3 class="text-lg font-semibold mb-2">Trust & Integrity</h3>
+          <p class="text-gray-600">We are redefining property deals with genuine connections and verified listings.</p>
         </div>
       </div>
     </div>
-    <!-- /.untree_co-section -->
+  </section>
 
-    <div class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3>Contact</h3>
-              <address>43 Raymouth Rd. Baltemoer, London 3910</address>
-              <ul class="list-unstyled links">
-                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                <li>
-                  <a href="mailto:info@mydomain.com">info@mydomain.com</a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3>Sources</h3>
-              <ul class="list-unstyled float-start links">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Vision</a></li>
-                <li><a href="#">Mission</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-              </ul>
-              <ul class="list-unstyled float-start links">
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Creative</a></li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3>Links</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">Our Vision</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-              </ul>
-
-              <ul class="list-unstyled social">
-                <li>
-                  <a href="#"><span class="icon-instagram"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-facebook"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-pinterest"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-dribbble"></span></a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-
-        <div class="row mt-5">
-          <div class="col-12 text-center">
-            <!-- 
-              **==========
-              NOTE: 
-              Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
-              **==========
-            -->
-
-            <p>
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              . All Rights Reserved. &mdash; Designed with love by
-              <a href="https://untree.co">Untree.co</a>
-              <!-- License information: https://untree.co/license/ -->
-            </p>
-            <div>
-              Distributed by
-              <a href="https://themewagon.com/" target="_blank">themewagon</a>
-            </div>
-          </div>
-        </div>
+  <!-- Contact Info Cards -->
+  <section class="container mx-auto px-6 py-16">
+    <div class="grid md:grid-cols-4 gap-6 text-center">
+      <div class="glass p-6 rounded-2xl shadow-lg text-white bg-indigo-600/70" data-aos="flip-left">
+        <h4 class="font-bold text-lg mb-1">📍 Location</h4>
+        <p>DGS Sales Experience, Lokhandwala Complex<br>Mumbai 400053</p>
       </div>
-      <!-- /.container -->
-    </div>
-    <!-- /.site-footer -->
 
-    <!-- Preloader -->
-    <div id="overlayer"></div>
-    <div class="loader">
-      <div class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
+      <div class="glass p-6 rounded-2xl shadow-lg text-white bg-indigo-500/70" data-aos="flip-left" data-aos-delay="100">
+        <h4 class="font-bold text-lg mb-1">📞 Call</h4>
+        <p>+91-9619583969<br>+91-9877788899</p>
+      </div>
+
+      <div class="glass p-6 rounded-2xl shadow-lg text-white bg-indigo-700/70" data-aos="flip-left" data-aos-delay="200">
+        <h4 class="font-bold text-lg mb-1">📧 Email</h4>
+        <p>info@nobrokerage.in<br>support@nobrokerage.in</p>
+      </div>
+
+      <div class="glass p-6 rounded-2xl shadow-lg text-white bg-indigo-800/70" data-aos="flip-left" data-aos-delay="300">
+        <h4 class="font-bold text-lg mb-1">🕒 Working Hours</h4>
+        <p>Mon–Sat: 10 AM – 7 PM<br>Sunday: Closed</p>
       </div>
     </div>
+  </section>
 
-    <script src="bootstrap.bundle.min.js"></script>
-    <script src="tiny-slider.js"></script>
-    <script src="aos.js"></script>
-    <script src="navbar.js"></script>
-    <script src="counter.js"></script>
-    <script src="custom.js"></script>
-  </body>
+  <!-- Contact Form -->
+  <section class="bg-white py-20 shadow-inner">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 class="text-3xl font-bold text-center text-indigo-700 mb-8" data-aos="fade-down">Get in Touch</h2>
+
+      <form id="contactForm" class="space-y-5 bg-gray-50 p-8 rounded-2xl shadow-lg" data-aos="fade-up">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Full Name</label>
+          <input type="text" name="name" required class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" name="email" required class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Mobile</label>
+          <input type="tel" name="phone" pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit number" required class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea name="message" rows="4" class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"></textarea>
+        </div>
+        <button type="submit" id="submitBtn" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+          Send Message
+        </button>
+      </form>
+
+      <div id="successMsg" class="hidden text-center mt-6">
+        <h3 class="text-xl font-semibold text-green-600 mb-2">✅ Message Sent Successfully!</h3>
+        <p class="text-gray-600">Thank you for reaching out. Our team will contact you soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map -->
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-bold text-center text-indigo-700 mb-6">Find Us on the Map</h2>
+      <iframe src="https://www.google.com/maps?q=Lokhandwala%20Complex%20Andheri%20West%20Mumbai&output=embed"
+        class="w-full h-80 rounded-2xl shadow-lg"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+    <p>© <script>document.write(new Date().getFullYear())</script> NoBrokerage. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('successMsg');
+    const submitBtn = document.getElementById('submitBtn');
+
+    const scriptURL = "YOUR_GOOGLE_SCRIPT_URL_HERE"; // Replace with your Apps Script URL
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      submitBtn.textContent = "Sending...";
+      submitBtn.disabled = true;
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(() => {
+          form.classList.add('hidden');
+          successMsg.classList.remove('hidden');
+        })
+        .catch(err => alert('Error: ' + err.message))
+        .finally(() => {
+          submitBtn.textContent = "Send Message";
+          submitBtn.disabled = false;
+        });
+    });
+  </script>
+</body>
 </html>
