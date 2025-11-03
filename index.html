@@ -62,6 +62,29 @@
       </h1>
     </div>
   </section>
+  <section id="listings" class="container mx-auto px-6 py-12">
+    <div class="flex justify-between items-center mb-8">
+      <h3 class="text-2xl font-semibold">Featured Properties</h3>
+      <div class="flex gap-3">
+        <select id="cityFilter" class="px-3 py-2 border rounded-lg">
+          <option value="">All Cities</option>
+        </select>
+        <select id="typeFilter" class="px-3 py-2 border rounded-lg">
+          <option value="">All Types</option>
+          <option>Apartment</option>
+          <option>Villa</option>
+          <option>Plot</option>
+        </select>
+        <select id="sortBy" class="px-3 py-2 border rounded-lg">
+          <option value="newest">Newest</option>
+          <option value="price_low">Price: Low to High</option>
+          <option value="price_high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="cards" class="grid md:grid-cols-3 gap-8"></div>
+  </section>
 
   <!-- FEATURED PROJECTS -->
   <section class="py-16 container mx-auto px-6">
@@ -134,6 +157,23 @@
           <h3 class="text-lg font-semibold mb-2">RERA Registered Properties</h3>
           <p class="text-gray-500 text-sm">Verified by Maharashtra Govt, ensuring full transparency.</p>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-indigo-50 py-16 text-center">
+    <h3 class="text-3xl font-semibold mb-6">What Our Users Say</h3>
+    <div class="grid md:grid-cols-3 gap-8 container mx-auto px-6">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="text-gray-600 italic">“I sold my flat in just 5 days using NoBrokerage Realty — and didn’t pay a single rupee as brokerage!”</p>
+        <p class="mt-3 font-semibold text-indigo-600">— Rakesh Mehta, New Delhi</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="text-gray-600 italic">“The platform is clean, fast, and easy to use. I found my 2BHK in Gurgaon under an hour.”</p>
+        <p class="mt-3 font-semibold text-indigo-600">— Priya Sharma, Gurgaon</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="text-gray-600 italic">“Best part? No brokers calling every 5 minutes. Just real owners and verified tenants.”</p>
+        <p class="mt-3 font-semibold text-indigo-600">— Arjun Desai, Pune</p>
       </div>
     </div>
   </section>
