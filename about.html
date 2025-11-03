@@ -1,613 +1,161 @@
-<!-- /*
-* Template Name: Property
-* Template Author: Untree.co
-* Template URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Untree.co" />
-    <link rel="shortcut icon" href="favicon.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoBrokerage | About Us</title>
+  <link rel="icon" href="favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <meta name="description" content="" />
-    <meta name="keywords" content="bootstrap, bootstrap5" />
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f9fafc; color: #111; }
+    .float-anim { animation: float 4s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<body class="bg-gray-50 text-gray-900">
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css" />
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
-
-    <link rel="stylesheet" href="css/tiny-slider.css" />
-    <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/style.css" />
-
-    <title>
-      Property &mdash; Free Bootstrap 5 Website Template by Untree.co
-    </title>
-  </head>
-  <body>
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close">
-          <span class="icofont-close js-menu-toggle"></span>
-        </div>
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-md fixed top-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center gap-2">
+        <img src="logo1.png" alt="NoBrokerage Logo" class="h-10 w-auto" />
+        <span class="text-indigo-700 font-semibold text-lg">NoBrokerage</span>
       </div>
-      <div class="site-mobile-menu-body"></div>
+
+      <nav class="hidden md:flex gap-6 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-indigo-600">Home</a>
+        <a href="properties.html" class="hover:text-indigo-600">Properties</a>
+        <a href="services.html" class="hover:text-indigo-600">Services</a>
+        <a href="about.html" class="text-indigo-700 font-semibold">About</a>
+        <a href="contact.html" class="hover:text-indigo-600">Contact Us</a>
+      </nav>
+
+      <button id="menuBtn" class="md:hidden text-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
 
-    <nav class="site-nav">
-      <div class="container">
-        <div class="menu-bg-wrap">
-          <div class="site-navigation">
-            <a href="index.html" class="logo m-0 float-start">Property</a>
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t shadow-lg">
+      <nav class="flex flex-col p-4 gap-3 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-indigo-600">Home</a>
+        <a href="properties.html" class="hover:text-indigo-600">Properties</a>
+        <a href="services.html" class="hover:text-indigo-600">Services</a>
+        <a href="about.html" class="hover:text-indigo-600">About</a>
+        <a href="contact.html" class="hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-            <ul
-              class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
-            >
-              <li><a href="index.html">Home</a></li>
-              <li class="has-children">
-                <a href="properties.html">Properties</a>
-                <ul class="dropdown">
-                  <li><a href="#">Buy Property</a></li>
-                  <li><a href="#">Sell Property</a></li>
-                  <li class="has-children">
-                    <a href="#">Dropdown</a>
-                    <ul class="dropdown">
-                      <li><a href="#">Sub Menu One</a></li>
-                      <li><a href="#">Sub Menu Two</a></li>
-                      <li><a href="#">Sub Menu Three</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="services.html">Services</a></li>
-              <li class="active"><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+  <!-- HERO SECTION -->
+  <section class="pt-28 pb-16 bg-gradient-to-br from-indigo-50 via-white to-indigo-100 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold text-indigo-700 mb-3" data-aos="fade-up">About NoBrokerage</h1>
+    <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="150">
+      Find your perfect property without paying a single rupee in brokerage. Verified listings, secure communication, and complete transparency.
+    </p>
+  </section>
 
-            <a
-              href="#"
-              class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
-              data-toggle="collapse"
-              data-target="#main-navbar"
-            >
-              <span></span>
-            </a>
-          </div>
-        </div>
+  <!-- ABOUT US CONTENT -->
+  <section class="container mx-auto px-6 py-10 bg-white shadow-lg rounded-2xl mb-16" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold text-center text-indigo-700 mb-4">Who We Are</h2>
+    <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6 rounded-full"></div>
+    <p class="text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
+      NoBrokerage is India's leading property marketplace that connects buyers, sellers, and tenants directly — cutting out middlemen and saving users thousands in brokerage costs.
+      <br><br>
+      With verified listings, AI-based search filters, and end-to-end support, we are redefining how India discovers real estate.
+    </p>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="container mx-auto px-6 py-10">
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="bg-white shadow-md rounded-2xl p-8 text-center hover:shadow-lg transition float-anim" data-aos="flip-left">
+        <h3 class="text-indigo-700 text-2xl font-semibold mb-3">Our Mission</h3>
+        <p class="text-gray-600">To make real estate transactions simple, transparent, and completely brokerage-free for every Indian.</p>
       </div>
-    </nav>
 
-    <div
-      class="hero page-inner overlay"
-      style="background-image: url('images/hero_bg_3.jpg')"
-    >
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-9 text-center mt-5">
-            <h1 class="heading" data-aos="fade-up">About</h1>
-
-            <nav
-              aria-label="breadcrumb"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <ol class="breadcrumb text-center justify-content-center">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li
-                  class="breadcrumb-item active text-white-50"
-                  aria-current="page"
-                >
-                  About
-                </li>
-              </ol>
-            </nav>
-          </div>
-        </div>
+      <div class="bg-white shadow-md rounded-2xl p-8 text-center hover:shadow-lg transition float-anim" data-aos="flip-right" data-aos-delay="200">
+        <h3 class="text-indigo-700 text-2xl font-semibold mb-3">Our Vision</h3>
+        <p class="text-gray-600">To become India’s most trusted and tech-driven real estate ecosystem by empowering every property seeker.</p>
       </div>
     </div>
+  </section>
 
-    <div class="section">
-      <div class="container">
-        <div class="row text-left mb-5">
-          <div class="col-12">
-            <h2 class="font-weight-bold heading text-primary mb-4">About Us</h2>
-          </div>
-          <div class="col-lg-6">
-            <p class="text-black-50">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              enim pariatur similique debitis vel nisi qui reprehenderit totam?
-              Quod maiores.
-            </p>
-            <p class="text-black-50">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-              saepe, explicabo nihil. Est, autem error cumque ipsum repellendus
-              veniam sed blanditiis unde ullam maxime veritatis perferendis
-              cupiditate, at non esse!
-            </p>
-            <p class="text-black-50">
-              Enim, nisi labore exercitationem facere cupiditate nobis quod
-              autem veritatis quis minima expedita. Cumque odio illo iusto
-              reiciendis, labore impedit omnis, nihil aut atque, facilis
-              necessitatibus asperiores porro qui nam.
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <p class="text-black-50">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-              saepe, explicabo nihil. Est, autem error cumque ipsum repellendus
-              veniam sed blanditiis unde ullam maxime veritatis perferendis
-              cupiditate, at non esse!
-            </p>
-            <p class="text-black-50">
-              Enim, nisi labore exercitationem facere cupiditate nobis quod
-              autem veritatis quis minima expedita. Cumque odio illo iusto
-              reiciendis, labore impedit omnis, nihil aut atque, facilis
-              necessitatibus asperiores porro qui nam.
-            </p>
-          </div>
+  <!-- FEATURES -->
+  <section class="container mx-auto px-6 py-16 bg-indigo-50 rounded-2xl">
+    <h2 class="text-3xl font-semibold text-center text-indigo-700 mb-6">Why Choose Us?</h2>
+    <div class="grid md:grid-cols-3 gap-10 mt-10">
+      <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:shadow-lg transition-all float-anim" data-aos="zoom-in" data-aos-delay="100">
+        <div class="text-4xl mb-3">💸</div>
+        <h4 class="text-xl font-semibold text-indigo-700 mb-2">0% Brokerage</h4>
+        <p class="text-gray-600">Connect directly with property owners and save lakhs in commission.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:shadow-lg transition-all float-anim" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-4xl mb-3">✅</div>
+        <h4 class="text-xl font-semibold text-indigo-700 mb-2">Verified Listings</h4>
+        <p class="text-gray-600">We ensure every property is verified for authenticity and safety.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:shadow-lg transition-all float-anim" data-aos="zoom-in" data-aos-delay="300">
+        <div class="text-4xl mb-3">🤝</div>
+        <h4 class="text-xl font-semibold text-indigo-700 mb-2">24×7 Support</h4>
+        <p class="text-gray-600">Our team is available round-the-clock to help you with your property journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 text-center bg-gradient-to-r from-indigo-600 to-indigo-700 text-white mt-16">
+    <h2 class="text-3xl font-bold mb-4">Start Your Brokerage-Free Journey Today</h2>
+    <p class="text-indigo-200 mb-6">Join thousands of happy users who’ve already found their dream home.</p>
+    <a href="contact.html" class="px-8 py-3 bg-white text-indigo-700 font-semibold rounded-lg hover:bg-indigo-100 transition">Contact Us</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-10">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-10">
+      <div>
+        <h3 class="text-white font-semibold mb-3">Contact</h3>
+        <p>DGS Sales Experience, 2nd Cross Lane, Lokhandwala Complex, Andheri West, Mumbai</p>
+        <p class="mt-2 text-indigo-400">📞 +91 9619583969</p>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-3">Quick Links</h3>
+        <ul class="space-y-1">
+          <li><a href="about.html" class="hover:text-indigo-400">About Us</a></li>
+          <li><a href="services.html" class="hover:text-indigo-400">Our Services</a></li>
+          <li><a href="vision.html" class="hover:text-indigo-400">Our Vision</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-3">Follow Us</h3>
+        <div class="flex gap-5 text-2xl mt-3">
+          <a href="https://www.instagram.com/sunny_rajbhar20" target="_blank" class="hover:text-indigo-400">📸</a>
+          <a href="#" class="hover:text-indigo-400">📘</a>
+          <a href="#" class="hover:text-indigo-400">💼</a>
         </div>
       </div>
     </div>
-
-    <div class="section pt-0">
-      <div class="container">
-        <div class="row justify-content-between mb-5">
-          <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2">
-            <div class="img-about dots">
-              <img src="images/hero_bg_3.jpg" alt="Image" class="img-fluid" />
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="d-flex feature-h">
-              <span class="wrap-icon me-3">
-                <span class="icon-home2"></span>
-              </span>
-              <div class="feature-text">
-                <h3 class="heading">Quality properties</h3>
-                <p class="text-black-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nostrum iste.
-                </p>
-              </div>
-            </div>
-
-            <div class="d-flex feature-h">
-              <span class="wrap-icon me-3">
-                <span class="icon-person"></span>
-              </span>
-              <div class="feature-text">
-                <h3 class="heading">Top rated agents</h3>
-                <p class="text-black-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nostrum iste.
-                </p>
-              </div>
-            </div>
-
-            <div class="d-flex feature-h">
-              <span class="wrap-icon me-3">
-                <span class="icon-security"></span>
-              </span>
-              <div class="feature-text">
-                <h3 class="heading">Easy and safe</h3>
-                <p class="text-black-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nostrum iste.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="text-center text-gray-500 text-sm mt-10">
+      © <script>document.write(new Date().getFullYear())</script> NoBrokerage Realty. All Rights Reserved.
     </div>
+  </footer>
 
-    <div class="section pt-0">
-      <div class="container">
-        <div class="row justify-content-between mb-5">
-          <div class="col-lg-7 mb-5 mb-lg-0">
-            <div class="img-about dots">
-              <img src="images/hero_bg_2.jpg" alt="Image" class="img-fluid" />
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="d-flex feature-h">
-              <span class="wrap-icon me-3">
-                <span class="icon-home2"></span>
-              </span>
-              <div class="feature-text">
-                <h3 class="heading">Quality properties</h3>
-                <p class="text-black-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nostrum iste.
-                </p>
-              </div>
-            </div>
-
-            <div class="d-flex feature-h">
-              <span class="wrap-icon me-3">
-                <span class="icon-person"></span>
-              </span>
-              <div class="feature-text">
-                <h3 class="heading">Top rated agents</h3>
-                <p class="text-black-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nostrum iste.
-                </p>
-              </div>
-            </div>
-
-            <div class="d-flex feature-h">
-              <span class="wrap-icon me-3">
-                <span class="icon-security"></span>
-              </span>
-              <div class="feature-text">
-                <h3 class="heading">Easy and safe</h3>
-                <p class="text-black-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nostrum iste.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-            <img src="images/img_1.jpg" alt="Image" class="img-fluid" />
-          </div>
-          <div class="col-md-4 mt-lg-5" data-aos="fade-up" data-aos-delay="100">
-            <img src="images/img_3.jpg" alt="Image" class="img-fluid" />
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <img src="images/img_2.jpg" alt="Image" class="img-fluid" />
-          </div>
-        </div>
-        <div class="row section-counter mt-5">
-          <div
-            class="col-6 col-sm-6 col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="counter-wrap mb-5 mb-lg-0">
-              <span class="number"
-                ><span class="countup text-primary">2917</span></span
-              >
-              <span class="caption text-black-50"># of Buy Properties</span>
-            </div>
-          </div>
-          <div
-            class="col-6 col-sm-6 col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div class="counter-wrap mb-5 mb-lg-0">
-              <span class="number"
-                ><span class="countup text-primary">3918</span></span
-              >
-              <span class="caption text-black-50"># of Sell Properties</span>
-            </div>
-          </div>
-          <div
-            class="col-6 col-sm-6 col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            <div class="counter-wrap mb-5 mb-lg-0">
-              <span class="number"
-                ><span class="countup text-primary">38928</span></span
-              >
-              <span class="caption text-black-50"># of All Properties</span>
-            </div>
-          </div>
-          <div
-            class="col-6 col-sm-6 col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <div class="counter-wrap mb-5 mb-lg-0">
-              <span class="number"
-                ><span class="countup text-primary">1291</span></span
-              >
-              <span class="caption text-black-50"># of Agents</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section sec-testimonials bg-light">
-      <div class="container">
-        <div class="row mb-5 align-items-center">
-          <div class="col-md-6">
-            <h2 class="font-weight-bold heading text-primary mb-4 mb-md-0">
-              The Team
-            </h2>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <div id="testimonial-nav">
-              <span class="prev" data-controls="prev">Prev</span>
-
-              <span class="next" data-controls="next">Next</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4"></div>
-        </div>
-        <div class="testimonial-slider-wrap">
-          <div class="testimonial-slider">
-            <div class="item">
-              <div class="testimonial">
-                <img
-                  src="images/person_1-min.jpg"
-                  alt="Image"
-                  class="img-fluid rounded-circle w-25 mb-4"
-                />
-                <h3 class="h5 text-primary">James Smith</h3>
-                <p class="text-black-50">Designer, Co-founder</p>
-
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean.
-                </p>
-
-                <ul class="social list-unstyled list-inline dark-hover">
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-twitter"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-facebook"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-linkedin"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-instagram"></span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="testimonial">
-                <img
-                  src="images/person_2-min.jpg"
-                  alt="Image"
-                  class="img-fluid rounded-circle w-25 mb-4"
-                />
-                <h3 class="h5 text-primary">Carol Houston</h3>
-                <p class="text-black-50">Designer, Co-founder</p>
-
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean.
-                </p>
-
-                <ul class="social list-unstyled list-inline dark-hover">
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-twitter"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-facebook"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-linkedin"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-instagram"></span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="testimonial">
-                <img
-                  src="images/person_3-min.jpg"
-                  alt="Image"
-                  class="img-fluid rounded-circle w-25 mb-4"
-                />
-                <h3 class="h5 text-primary">Synthia Cameron</h3>
-                <p class="text-black-50">Designer, Co-founder</p>
-
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean.
-                </p>
-
-                <ul class="social list-unstyled list-inline dark-hover">
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-twitter"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-facebook"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-linkedin"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-instagram"></span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="testimonial">
-                <img
-                  src="images/person_4.jpg"
-                  alt="Image"
-                  class="img-fluid rounded-circle w-25 mb-4"
-                />
-                <h3 class="h5 text-primary">Davin Smith</h3>
-                <p class="text-black-50">Designer, Co-founder</p>
-
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean.
-                </p>
-
-                <ul class="social list-unstyled list-inline dark-hover">
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-twitter"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-facebook"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-linkedin"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-instagram"></span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3>Contact</h3>
-              <address>43 Raymouth Rd. Baltemoer, London 3910</address>
-              <ul class="list-unstyled links">
-                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                <li>
-                  <a href="mailto:info@mydomain.com">info@mydomain.com</a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3>Sources</h3>
-              <ul class="list-unstyled float-start links">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Vision</a></li>
-                <li><a href="#">Mission</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-              </ul>
-              <ul class="list-unstyled float-start links">
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Creative</a></li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <div class="widget">
-              <h3>Links</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">Our Vision</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-              </ul>
-
-              <ul class="list-unstyled social">
-                <li>
-                  <a href="#"><span class="icon-instagram"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-facebook"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-pinterest"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-dribbble"></span></a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-
-        <div class="row mt-5">
-          <div class="col-12 text-center">
-            <!-- 
-              **==========
-              NOTE: 
-              Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
-              **==========
-            -->
-
-            <p>
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              . All Rights Reserved. &mdash; Designed with love by
-              <a href="https://untree.co">Untree.co</a>
-              <!-- License information: https://untree.co/license/ -->
-            </p>
-            <div>
-              Distributed by
-              <a href="https://themewagon.com/" target="_blank">themewagon</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.container -->
-    </div>
-    <!-- /.site-footer -->
-
-    <!-- Preloader -->
-    <div id="overlayer"></div>
-    <div class="loader">
-      <div class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-    </div>
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/tiny-slider.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/counter.js"></script>
-    <script src="js/custom.js"></script>
-  </body>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    document.getElementById("menuBtn").addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+  </script>
+</body>
 </html>
