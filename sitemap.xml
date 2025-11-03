@@ -45,14 +45,5 @@
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- Add future project detail pages here -->
-  <!-- Example: -->
-  <!--
-  <url>
-    <loc>https://nobrokerage.com/dgs-sheetal-sky.html</loc>
-    <priority>0.85</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  -->
 
 </urlset>
