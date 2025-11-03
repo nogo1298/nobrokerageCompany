@@ -25,7 +25,6 @@
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
       <div class="flex items-center gap-2">
         <img src="logo1.png" alt="NoBrokerage Logo" class="h-10 w-auto">
-        
       </div>
 
       <nav class="hidden md:flex gap-6 text-gray-700 font-medium">
@@ -62,7 +61,7 @@
     </p>
   </section>
 
-  <!-- SERVICES GRID (All 6 Cards) -->
+  <!-- SERVICES GRID -->
   <section class="container mx-auto px-6 pb-20">
     <div class="grid md:grid-cols-3 gap-8">
 
@@ -101,6 +100,7 @@
         <h3 class="font-semibold text-lg mb-2">24×7 Support</h3>
         <p class="text-sm text-gray-600">Our team is available around the clock to assist you anytime.</p>
       </div>
+
     </div>
   </section>
 
@@ -112,23 +112,28 @@
       <p class="text-gray-600 mb-4" id="popupSubtitle">Please share your details below.</p>
 
       <form id="popupForm" class="space-y-4">
-        <input type="hidden" id="popupService" name="service">
+        <input type="hidden" id="popupService">
+
         <div>
           <label class="block text-sm font-medium text-gray-700">Full Name</label>
-          <input type="text" name="name" required class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none">
+          <input id="popupName" type="text" required class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none">
         </div>
+
         <div>
           <label class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" name="email" required class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none">
+          <input id="popupEmail" type="email" required class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none">
         </div>
+
         <div>
           <label class="block text-sm font-medium text-gray-700">Mobile Number</label>
-          <input type="tel" name="phone" pattern="[6-9][0-9]{9}" required title="Enter a valid 10-digit Indian number" class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none">
+          <input id="popupPhone" type="tel" pattern="[6-9][0-9]{9}" required title="Enter a valid 10-digit Indian number" class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none">
         </div>
+
         <div>
           <label class="block text-sm font-medium text-gray-700">Message</label>
-          <textarea name="message" rows="3" class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"></textarea>
+          <textarea id="popupMessage" rows="3" class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"></textarea>
         </div>
+
         <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">Submit</button>
       </form>
 
@@ -146,42 +151,59 @@
     </div>
   </footer>
 
+  <!-- ✅ Updated Script -->
   <script>
-    AOS.init({ duration: 1000, once: true });
+AOS.init({ duration: 1000, once: true });
 
-    document.getElementById("menuBtn").addEventListener("click", () => {
-      document.getElementById("mobileMenu").classList.toggle("hidden");
-    });
+// Mobile Menu Toggle
+document.getElementById("menuBtn").addEventListener("click", () => {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+});
 
-    const popup = document.getElementById("popupModal");
-    const popupForm = document.getElementById("popupForm");
-    const successMsg = document.getElementById("successMessage");
-    const subtitle = document.getElementById("popupSubtitle");
+// Elements
+const popup = document.getElementById("popupModal");
+const popupForm = document.getElementById("popupForm");
+const successMsg = document.getElementById("successMessage");
+const subtitle = document.getElementById("popupSubtitle");
 
-    function openForm(serviceName) {
-      document.getElementById("popupService").value = serviceName;
-      subtitle.textContent = `Interested in: ${serviceName}`;
-      popup.classList.remove("hidden");
-      successMsg.classList.add("hidden");
-      popupForm.classList.remove("hidden");
-    }
+function openForm(serviceName) {
+  document.getElementById("popupService").value = serviceName;
+  subtitle.textContent = `Interested in: ${serviceName}`;
+  popup.classList.remove("hidden");
+  successMsg.classList.add("hidden");
+  popupForm.classList.remove("hidden");
+}
 
-    function closeForm() {
-      popup.classList.add("hidden");
-      popupForm.reset();
-    }
+function closeForm() {
+  popup.classList.add("hidden");
+  popupForm.reset();
+}
 
-    const scriptURL = "YOUR_GOOGLE_SCRIPT_URL_HERE"; // replace with your actual Google Script URL
+// Google Sheets Script URL
+const scriptURL = "https://script.google.com/macros/s/AKfycbx_LzscHfkiMDltnmmmJH5S4CovOG-BUzk2NpTXhEU5a9F8MhpiTjoNEb-b5SyaL3YtSw/exec";
 
-    popupForm.addEventListener("submit", e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: "POST", body: new FormData(popupForm) })
-        .then(() => {
-          popupForm.classList.add("hidden");
-          successMsg.classList.remove("hidden");
-        })
-        .catch(error => alert("Error: " + error.message));
-    });
+// Submit Form to Google Sheets
+popupForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById("popupName").value,
+    email: document.getElementById("popupEmail").value,
+    phone: document.getElementById("popupPhone").value,
+    message: `Service: ${document.getElementById("popupService").value} | Message: ${document.getElementById("popupMessage").value}`
+  };
+
+  await fetch(scriptURL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  popupForm.classList.add("hidden");
+  successMsg.classList.remove("hidden");
+});
   </script>
+
 </body>
 </html>
