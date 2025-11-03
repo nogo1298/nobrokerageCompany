@@ -190,32 +190,55 @@
       });
 
       function viewDetails(id) {
-        const prop = properties.find(x => x.id === id);
-        Swal.fire({
-          title: prop.title,
-          html: `
-            <img src="${prop.image}" class="rounded-lg mb-3 w-full object-cover">
-            <p><strong>City:</strong> ${prop.city}</p>
-            <p><strong>Price:</strong> ₹${prop.price}</p>
-            <p><strong>Type:</strong> ${prop.type}</p>
-            <p><strong>Possession:</strong> ${prop.possession}</p>
-            <hr class="my-2">
-            <p class="text-gray-600">Please share your details to view owner contact:</p>
-            <input id="userName" class="swal2-input" placeholder="Your Name">
-            <input id="userMobile" class="swal2-input" placeholder="Mobile Number">
-            <input id="userEmail" class="swal2-input" placeholder="Email Address">
-          `,
-          confirmButtonText: "Submit",
-          preConfirm: () => {
-            const name = document.getElementById("userName").value;
-            const phone = document.getElementById("userMobile").value;
-            const email = document.getElementById("userEmail").value;
-            if (!name || !phone || !email)
-              Swal.showValidationMessage("All fields are required!");
-            else Swal.fire("Submitted!", "Our team will contact you soon.", "success");
-          }
-        });
+  const prop = properties.find(x => x.id === id);
+
+  Swal.fire({
+    title: prop.title,
+    html: `
+      <img src="${prop.image}" class="rounded-lg mb-3 w-full object-cover">
+      <p><strong>City:</strong> ${prop.city}</p>
+      <p><strong>Price:</strong> ₹${prop.price}</p>
+      <p><strong>Type:</strong> ${prop.type}</p>
+      <p><strong>Possession:</strong> ${prop.possession}</p>
+      <hr class="my-2">
+      <p class="text-gray-600">Please share your details to view owner contact:</p>
+      <input id="userName" class="swal2-input" placeholder="Your Name">
+      <input id="userMobile" class="swal2-input" placeholder="Mobile Number">
+      <input id="userEmail" class="swal2-input" placeholder="Email Address">
+    `,
+    confirmButtonText: "Submit",
+    preConfirm: async () => {
+      const name = document.getElementById("userName").value;
+      const phone = document.getElementById("userMobile").value;
+      const email = document.getElementById("userEmail").value;
+
+      if (!name || !phone || !email) {
+        Swal.showValidationMessage("All fields are required!");
+        return false;
       }
+
+      // ✅ Send to Google Sheets
+      const scriptURL = "https://script.google.com/macros/s/AKfycbx_LzscHfkiMDltnmmmJH5S4CovOG-BUzk2NpTXhEU5a9F8MhpiTjoNEb-b5SyaL3YtSw/exec";
+
+      const data = { 
+        name: name, 
+        phone: phone, 
+        email: email, 
+        message: `Lead from Property Page: ${prop.title}` 
+      };
+
+      await fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      Swal.fire("✅ Submitted!", "Our team will contact you soon.", "success");
+    }
+  });
+}
+
     </script>
   </body>
 </html>
