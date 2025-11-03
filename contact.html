@@ -210,11 +210,10 @@
   };
 
   fetch(scriptURL, {
-    method: "POST",
-    mode: "cors",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  })
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(data),
+})
   .then(res => {
     Swal.fire({
       title: "Message Sent!",
