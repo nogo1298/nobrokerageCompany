@@ -197,46 +197,38 @@
 
   <!-- Google Script Submission -->
   <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbx_LzscHfkiMDltnmmmJH5S4CovOG-BUzk2NpTXhEU5a9F8MhpiTjoNEb-b5SyaL3YtSw/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbz-niNw5XBYo16kcA9IeeeXny9Rax4hH3fGNoVxLzouIwNVxqqYrTT3oxdehFIVtGyz/exec";
 
     document.getElementById("myForm").addEventListener("submit", async function(event) {
-      event.preventDefault();
+  event.preventDefault();
 
-      const data = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
-        message: document.getElementById("message").value,
-      };
+  const data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    message: document.getElementById("message").value,
+  };
 
-      try {
-        await fetch(scriptURL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        });
-
-        Swal.fire({
-          title: "Message Sent!",
-          text: "Thank you for contacting us. Our team will reach out soon 🎉",
-          icon: "success",
-          confirmButtonText: "Go to Home"
-        }).then(() => {
-          window.location.href = "index.html";
-        });
-
-        document.getElementById("myForm").reset();
-      } catch (error) {
-        Swal.fire("Error", "Something went wrong while submitting the form 😞", "error");
-        console.error(error);
-      }
+  fetch(scriptURL, {
+    method: "POST",
+    mode: "cors",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  })
+  .then(res => {
+    Swal.fire({
+      title: "Message Sent!",
+      text: "Thank you for contacting us. We will reach you soon ✅",
+      icon: "success",
+      confirmButtonText: "OK"
     });
-
-    // Mobile menu toggle
-    document.getElementById("menuBtn").addEventListener("click", () => {
-      document.getElementById("mobileMenu").classList.toggle("hidden");
-    });
+    document.getElementById("myForm").reset();
+  })
+  .catch(err => {
+    console.error("Error:", err);
+    Swal.fire("Error", "Form submission failed!", "error");
+  });
+});
   </script>
 
 </body>
